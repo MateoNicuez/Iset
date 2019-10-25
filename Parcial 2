@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include "libreria.h"
+
+void menu();
+void ff();
+int cantidad();
+void cargafig(fig V[], int cantf);
+void mosstr(fig V[], int cantf);
+void calcper(fig V[], int cantf);
+void muestracom(fig V[], int cantf);
+int main()
+{
+
+ cntr();
+
+}
