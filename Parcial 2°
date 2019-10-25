@@ -1,0 +1,114 @@
+typedef struct figura{
+    char tipo;
+    float base, altura, perimetro, superficie;
+} fig;
+
+void cntr()
+{
+
+    int cantf;
+    cantf=cantidad();
+    fig store[cantf];
+    cargafig(store, cantf);
+    mosstr(store, cantf);
+    system("pause");
+    system("cls");
+    calcper(store, cantf);
+    muestracom(store, cantf);
+
+
+}
+
+void ff()
+{
+    fflush(stdin);
+}
+
+int cantidad() //Determina la cantidad de figuras
+{
+    int cant;
+    printf("Ingrese la cantidad de figuras: ");
+    ff();
+    scanf("%d", &cant);
+    return cant;
+}
+
+void cargafig(fig V[], int cantf) //Carga de las figuras
+{
+    int i;
+
+    for(i=0; i<cantf; i++){
+        do{
+            printf("Ingrese el tipo de figura\nC para cuadrado, R para rectangulo, T para triangulo: ");
+            ff();
+            scanf("%c", &V[i].tipo);
+        }
+        while(V[i].tipo!='T'&&V[i].tipo!='R'&&V[i].tipo!='C');
+
+        printf("Ingrese la base de la figura: ");
+        do{
+            ff();
+            scanf("%g", &V[i].base);
+            if(V[i].base<=0) printf("Valor invalido ingrese otra vez: ");
+        }
+        while(V[i].base<=0);
+
+        if(V[i].tipo=='C'){
+            V[i].altura=V[i].base;
+        }
+        else{
+            printf("Ingrese la altura de la figura: ");
+            do{
+                ff();
+                scanf("%g", &V[i].altura);
+                if(V[i].altura<=0) printf("Valor invalido ingrese otra vez: ");
+            }
+            while(V[i].altura<=0);
+        }
+    }
+
+}
+
+void mosstr(fig V[], int cantf){ //Muestra las figuras
+    int i;
+    for(i=0; i<cantf; i++){
+        printf("Tipo de figura: %c\t",V[i].tipo);
+        printf("Base: %g \t",V[i].base);
+        printf("Altura: %g\n",V[i].altura);
+    }
+}
+
+void calcper(fig V[], int cantf){ //Calculo de superficie y perimetro
+    int i;
+    for(i=0; i<cantf; i++)
+    {
+        if(V[i].tipo=='C'){     //Calculo del cuadrado
+            V[i].perimetro=(V[i].base*4);
+            V[i].superficie=(V[i].base*V[i].altura);
+        }
+        else
+            if(V[i].tipo=='R'){     //Caluculo del rectangulo
+                V[i].perimetro=(V[i].base*2+V[i].altura*2);
+                V[i].superficie=(V[i].base*V[i].altura);
+            }
+            else{       //Calculo del triangulo
+                V[i].perimetro=((V[i].base+V[i].altura)*2);
+                V[i].superficie=((V[i].base*V[i].altura)/2);
+            }
+
+        }
+    }
+}
+
+void muestracom(fig V[], int cantf){    //Muestra de la lista final
+    int i;
+    printf("N Figura\tTipo figura\tPerimetro\tSuperficie\n");
+    for(i=0; i<cantf; i++){
+        if(V[i].tipo=='T')  printf("  %d\t\t Triangulo\t %g\t\t %g", i+1, V[i].perimetro, V[i].superficie);
+        else{
+            if(V[i].tipo=='R')  printf("  %d\t\t Rectangulo\t %g\t\t %g", i+1, V[i].perimetro, V[i].superficie);
+            else    printf("  %d\t\t Cuadrado\t %g\t\t %g", i+1, V[i].perimetro, V[i].superficie);
+        }
+        printf("\n");
+    }
+}
