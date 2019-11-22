@@ -1,0 +1,41 @@
+# depslib dependency file v1.0
+1574448423 source:c:\users\usuario\desktop\martinez lautaro\modelo de final\prototipos.c
+
+1574454350 source:c:\users\usuario\desktop\martinez lautaro\modelo de final\main.c
+	<stdio.h>
+	<stdlib.h>
+	"prototipos.h"
+
+1574453964 c:\users\usuario\desktop\martinez lautaro\modelo de final\libreria.h
+	<stdio.h>
+	<stdlib.h>
+	"estructuras.c"
+
+1574448435 c:\users\usuario\desktop\martinez lautaro\modelo de final\validaciones.h
+	"libreria.h"
+
+1574448423 c:\users\usuario\desktop\martinez lautaro\modelo de final\prototipos.c
+
+1574453866 c:\users\usuario\desktop\martinez lautaro\modelo de final\estructuras.c
+
+1574453866 source:c:\users\usuario\desktop\martinez lautaro\modelo de final\estructuras.c
+
+1574454176 c:\users\usuario\desktop\martinez lautaro\modelo de final\prototipos.h
+	"estructuras.c"
+
+1574454443 source:c:\users\usuario\desktop\martinez lautaro\modelo de final\libreria.c
+	<stdio.h>
+	<stdlib.h>
+	"estructuras.c"
+
+1574454794 source:c:\users\usuario\desktop\martinez lautaro\modelo de final\cargadatos.c
+	<stdio.h>
+	<stdlib.h>
+	"estructuras.c"
+
+1574454839 source:c:\users\usuario\desktop\martinez lautaro\modelo de final\menu.c
+	"estructuras.c"
+
+1574454769 source:c:\users\usuario\desktop\martinez lautaro\modelo de final\validaciones.c
+	"estructuras.c"
+
