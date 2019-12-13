@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1576257834 source:c:\users\cetec\desktop\nicuez bouzas mateo\main.c
+	<stdio.h>
+	<stdlib.h>
+	"prototipos.h"
+
+1576258953 source:c:\users\cetec\desktop\nicuez bouzas mateo\libreria.c
+
+1576261860 c:\users\cetec\desktop\nicuez bouzas mateo\prototipos.h
+
